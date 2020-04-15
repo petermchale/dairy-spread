@@ -1,12 +1,16 @@
-## Dairy spread 
+## DairySpread 
 
-Dairy spread creates a google spreadsheet from a vcf. 
+DairySpread creates a google spreadsheet from a vcf. 
 Each record in the spreadsheet contains a hyperlink representing the location of the variant, 
 and additional columns representing user-defined parts of the vcf record, e.g., INFO.AC. 
 The links can be used to visually inspect the variant in igv.js,
 while the spreadsheet can be used to record any conclusions drawn from the manual inspection. 
 
-## Table of contents 
+## How to get DairySpread working
+
+1. Obtain credentials for the Google Drive API 
+2. Install dependencies 
+3. Run the tool  
 
 ## Obtain credentials for the Google Drive API 
 
