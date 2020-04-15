@@ -8,7 +8,7 @@ while the spreadsheet can be used to record any conclusions drawn from the manua
 
 ## How to get dairy-spread working
 
-1. [create an anchor](#obtain-credentials-for-the-google-drive-api)
+1. [Obtain credentials for the Google Drive API](#obtain-credentials-for-the-google-drive-api)
 2. Install dependencies 
 3. Run the tool at the command line 
 
