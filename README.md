@@ -12,7 +12,7 @@ while the spreadsheet can be used to record any conclusions drawn from the manua
 
 Create a project at https://console.cloud.google.com/ Here I've created one called "paddy": 
 
-<img width="400" src="images/1.png">
+<img width="300" src="images/1.png">
 
 Click "Go to API overview": 
 
