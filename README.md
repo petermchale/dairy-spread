@@ -32,7 +32,7 @@ Click "ENABLE":
 
 Click "CREATE CREDENTIALS": 
 
-<img width="750" src="images/6.png">
+<img width="900" src="images/6.png">
 
 Select the options indicated below: 
 
