@@ -1,16 +1,16 @@
-## DairySpread 
+## dairy-spread 
 
-DairySpread creates a google spreadsheet from a vcf. 
-Each record in the spreadsheet contains a hyperlink representing the location of the variant, 
+dairy-spread allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created.  
+Each record in the spreadsheet contains a hyperlink representing the location of a variant, 
 and additional columns representing user-defined parts of the vcf record, e.g., INFO.AC. 
 The links can be used to visually inspect the variant in igv.js,
-while the spreadsheet can be used to record any conclusions drawn from the manual inspection. 
+while the spreadsheet can be used to record any conclusions drawn from the manual inspection of the igv visualization. 
 
-## How to get DairySpread working
+## How to get dairy-spread working
 
 1. Obtain credentials for the Google Drive API 
 2. Install dependencies 
-3. Run the tool  
+3. Run the tool at the command line 
 
 ## Obtain credentials for the Google Drive API 
 
