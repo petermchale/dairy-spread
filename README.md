@@ -20,7 +20,7 @@ Click "Go to API overview":
 
 Click "ENABLE APIS AND SERVICES": 
 
-<img src="images/3.png">
+<img width="300" src="images/3.png">
 
 In the search box that appears, type "Google Drive": 
 
