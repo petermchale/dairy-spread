@@ -43,7 +43,7 @@ and fill in the "Service account name" as indicated:
 
 <img width="500" src="images/8.png">
 
-Clicking "Continue" will download a json file that should be renamed to "credentials.json" and moved to this folder. 
+Clicking "Continue" will download a json file that should be renamed to `credentials.json` and moved to this folder. 
 
 For security, run `chmod og-r credentials.json`. 
 
