@@ -41,7 +41,7 @@ Select the options indicated below:
 and click "What credentials do I need". On the next screen, select "Project Editor" in the "Role" dropdown
 and fill in the "Service account name" as indicated: 
 
-<img src="images/8.png">
+<img width="500" src="images/8.png">
 
 Clicking "Continue" will download a json file that should be renamed to "credentials.json" and moved to this folder. 
 
