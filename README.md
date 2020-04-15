@@ -24,7 +24,7 @@ Click "ENABLE APIS AND SERVICES":
 
 In the search box that appears, type "Google Drive": 
 
-<img width="300" src="images/4.png">
+<img width="500" src="images/4.png">
 
 Click "ENABLE": 
 
