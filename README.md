@@ -1,4 +1,4 @@
-## dairy-spread 
+# dairy-spread 
 
 dairy-spread allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created, 
 also from the command line.
@@ -57,7 +57,7 @@ Navigate back to https://console.cloud.google.com/ and click "ENABLE APIS AND SE
 Wait at least 15 minutes for the requests to enable the two APIs to propagate to google's systems. 
 
 
-## TODO 
+## Install dependencies 
 
 
 
