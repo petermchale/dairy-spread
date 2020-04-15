@@ -28,7 +28,7 @@ In the search box that appears, type "Google Drive":
 
 Click "ENABLE": 
 
-<img src="images/5.png">
+<img width="500" src="images/5.png">
 
 Click "CREATE CREDENTIALS": 
 
