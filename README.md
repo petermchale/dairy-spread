@@ -36,7 +36,7 @@ Click "CREATE CREDENTIALS":
 
 Select the options indicated below: 
 
-<img src="images/7.png">
+<img width="500" src="images/7.png">
 
 and click "What credentials do I need". On the next screen, select "Project Editor" in the "Role" dropdown
 and fill in the "Service account name" as indicated: 
