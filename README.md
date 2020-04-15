@@ -16,15 +16,15 @@ Create a project at https://console.cloud.google.com/ Here I've created one call
 
 Click "Go to API overview": 
 
-<img width="300" src="images/2.png">
+<img width="200" src="images/2.png">
 
 Click "ENABLE APIS AND SERVICES": 
 
-<img width="300" src="images/3.png">
+<img width="200" src="images/3.png">
 
 In the search box that appears, type "Google Drive": 
 
-<img src="images/4.png">
+<img width="300" src="images/4.png">
 
 Click "ENABLE": 
 
