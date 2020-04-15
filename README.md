@@ -1,6 +1,7 @@
 ## dairy-spread 
 
-dairy-spread allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created.  
+dairy-spread allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created, 
+also from the command line.  
 Each record in the spreadsheet contains a hyperlink representing the location of a variant, 
 and additional columns representing user-defined parts of the vcf record, e.g., INFO.AC. 
 The links can be used to visually inspect the variant in igv.js,
