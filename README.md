@@ -9,11 +9,12 @@ e.g., create the spreadsheet from a traditional bioinformatics data file,
 or read data from the spreadsheet after it has been manually curated in order to push that data into another pipeline.
 The code in this repository represents a first step in this direction.  
 
-**dairy-spread** allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created, 
-also from the command line.
+**dairy-spread** allows you to create a google spreadsheet at the command line from a bed file,
+and to delete a spreadsheet so created, also from the command line.
+The bed file is assumed to have at least four columns, with the fourth column formated according to the [gfftags spec](https://software.broadinstitute.org/software/igv/BED), and an optional `#gffTags` header line. 
 Each record in the spreadsheet contains a hyperlink representing the location of a variant, 
-and additional columns representing user-defined parts of the vcf record, e.g., INFO.AC. 
-The link can be used to visually inspect the variant in igv.js,
+and additional columns corresponding to the tags in the fourth column. 
+The link can be used to visually inspect the locus in igv.js,
 while the spreadsheet can be used to record any conclusions drawn from the manual inspection of the igv visualization. 
 This can be useful during the development of variant-calling software, 
 when one often needs to inspect cases where (i) the software is not capturing variants that are known to exist, 
@@ -77,4 +78,4 @@ conda create --name dairy-spread python=3.7 gspread google-auth
 
 
 ## TODO 
-* remove gspread dependency and complicated API activation step by following https://youtu.be/VLdrgE8iJZI
+* remove dependency on `gspread` and credentials by following https://youtu.be/VLdrgE8iJZI
