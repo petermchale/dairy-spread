@@ -7,8 +7,8 @@ To integrate this approach into a data-analysis pipeline,
 it is useful to be able to programatically interact with the spreadsheet,
 e.g., create the spreadsheet from a traditional bioinformatics data file, 
 or read data from the spreadsheet after it has been manually curated in order to push that data into another pipeline.
+The code in this repository represents a first step in this direction.  
 
-The code in this repository represents a first step in this direction. 
 **dairy-spread** allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created, 
 also from the command line.
 Each record in the spreadsheet contains a hyperlink representing the location of a variant, 
