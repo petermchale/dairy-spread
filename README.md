@@ -24,7 +24,7 @@ and/or (ii) the software is making calls where variants are known to be absent.
 
 1. [Obtain credentials for the Google Drive API](#obtain-credentials-for-the-google-drive-api)
 2. [Install dependencies](#install-dependencies)
-3. Run the tool at the command line 
+3. [Run the tool at the command line](#run-the-tool-at-the-command-line)
 
 ## Obtain credentials for the Google Drive API 
 
