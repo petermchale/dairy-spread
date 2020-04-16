@@ -78,9 +78,15 @@ conda create --name dairy-spread python=3.7 gspread google-auth
 
 ## Run the tool at the command line 
 
+Make scripts executable: 
+
+```
+chmod u+x create_spreadsheet remove_spreadsheet
+``` 
+
 Create a spreadsheet from a bed file: 
 ```
-python create_spreadsheet.py \
+./create_spreadsheet \
   --bed ${bed} \
   --title "my spreadsheet name" \
   --credentials "credentials.json" \
@@ -89,7 +95,7 @@ python create_spreadsheet.py \
 
 Remove the spreadsheet: 
 ```
-python remove_spreadsheet.py --bed ${bed} --credentials credentials.json 
+./remove_spreadsheet --bed ${bed} --credentials credentials.json 
 ```
 
 ## TODO 
