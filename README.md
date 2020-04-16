@@ -14,7 +14,7 @@ and to delete a spreadsheet so created, also from the command line.
 The bed file is assumed to have at least four columns, with the fourth column formated according to the [gfftags spec](https://software.broadinstitute.org/software/igv/BED), and an optional `#gffTags` header line. 
 Each record in the spreadsheet contains a hyperlink representing the location of the locus, 
 and additional columns corresponding to the tags in the fourth column. 
-The link can be used to visually inspect the locus in igv.js,
+The link can be used to visually inspect the locus in `igv.js`,
 while the spreadsheet can be used to record any conclusions drawn from the manual inspection of the igv visualization. 
 This can be useful during the development of variant-calling software, 
 when one often needs to inspect cases where (i) the software is not capturing variants that are known to exist, 
