@@ -1,11 +1,19 @@
 # dairy-spread 
 
+Often it is useful to have bioinformatics data in a spreadsheet, 
+where the data can be better visualized and annotated manually. 
+To integrate this approach into a data-analysis pipeline, 
+it is useful to be able to programatically edit the spreadsheet. 
+
 dairy-spread allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created, 
 also from the command line.
 Each record in the spreadsheet contains a hyperlink representing the location of a variant, 
 and additional columns representing user-defined parts of the vcf record, e.g., INFO.AC. 
-The links can be used to visually inspect the variant in igv.js,
+The link can be used to visually inspect the variant in igv.js,
 while the spreadsheet can be used to record any conclusions drawn from the manual inspection of the igv visualization. 
+This can be useful during the development of variant-calling software, 
+when one often needs to inspect cases where (i) the software is not capturing variants that are known to exist, 
+and/or (ii) the software is making calls where variants are known to be absent. 
 
 ## How to get dairy-spread working
 

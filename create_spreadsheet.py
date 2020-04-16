@@ -1,5 +1,6 @@
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
+from google.auth.transport.requests import AuthorizedSession
 from pathlib import Path
 from fetch_igv_urls import fetch_igv_urls
 import sys 
@@ -15,10 +16,12 @@ def spreadsheet_already_exists(url_filename):
 
 def create_spreadsheet(bed_path, url_filename): 
   scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
-  credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
+  credentials = Credentials.from_service_account_file('credentials.json', scopes=scope)
   # https://github.com/burnash/gspread/blob/0f22a5d9f9adea7db72c94273d9f69a5a7711398/gspread/client.py#L27
-  client = gspread.authorize(credentials)
-  
+  # https://stackoverflow.com/a/59699007/6674256
+  client = gspread.Client(auth=credentials)
+  client.session = AuthorizedSession(credentials)
+
   # https://github.com/burnash/gspread/blob/0f22a5d9f9adea7db72c94273d9f69a5a7711398/gspread/models.py#L39
   spreadsheet = client.create('Missing SVs')
  
