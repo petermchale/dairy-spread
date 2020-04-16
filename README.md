@@ -1,7 +1,7 @@
 # dairy-spread 
 
 Often it is useful to have bioinformatics data in a spreadsheet, 
-where the data can be better visualized and annotated manually. 
+where the data can be easily visualized and annotated manually. 
 To integrate this approach into a data-analysis pipeline, 
 it is useful to be able to programatically interact with the spreadsheet,
 e.g., create the spreadsheet from a traditional bioinformatics data file, 
