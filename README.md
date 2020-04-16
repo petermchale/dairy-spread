@@ -76,4 +76,5 @@ conda create --name dairy-spread python=3.7 gspread google-auth
 ```
 
 
-
+## TODO 
+* remove gspread dependency and complicated API activation step by following https://youtu.be/VLdrgE8iJZI
