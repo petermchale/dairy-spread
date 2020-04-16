@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+
+from get_client import get_client
+from pathlib import Path
+from fetch_data import fetch_data
+from get_url_path import get_url_path
+import sys 
+import argparse
+
+def spreadsheet_already_exists(args):
+  if Path(get_url_path(args)).exists():
+    print('Spreadsheet already exists for:\n{}'.format(args.bed), file=sys.stderr)
+    print('Please run remove script first!' , file=sys.stderr)
+    return True
+  else: 
+    return False
+
+def create_spreadsheet(args):
+  client = get_client(args) 
+
+  # https://github.com/burnash/gspread/blob/0f22a5d9f9adea7db72c94273d9f69a5a7711398/gspread/models.py#L39
+  spreadsheet = client.create(args.title)
+ 
+  spreadsheet.values_update(
+    range='Sheet1!A1',
+    params={
+      'valueInputOption': 'USER_ENTERED'
+    },
+    body={
+      'values': [['source file: ' + args.bed]]
+    }
+  )
+
+  # https://github.com/burnash/gspread/blob/0f22a5d9f9adea7db72c94273d9f69a5a7711398/gspread/models.py#L88
+  # make column headings bold
+  request_body = {
+    'requests': [
+      { 
+        'repeatCell': {
+          'range': {
+            'startRowIndex': 1, 
+            'endRowIndex': 2
+          },
+          'cell': {
+            'userEnteredFormat': {
+              'textFormat': {'bold': True}
+            }
+          },
+          'fields': 'userEnteredFormat.textFormat.bold',
+        }
+      }
+    ]
+  }
+  spreadsheet.batch_update(request_body)
+
+  header, urls_annotations = fetch_data(args.bed) 
+
+  spreadsheet.values_update(
+    range='Sheet1!A2',
+    params={
+      'valueInputOption': 'USER_ENTERED'
+    },
+    body={
+      'values': header
+    }
+  )
+  
+  spreadsheet.values_update(
+    range='Sheet1!A3',
+    params={
+      'valueInputOption': 'USER_ENTERED'
+    },
+    body={
+      'values': urls_annotations
+    }
+  )
+ 
+  # share spreadsheet url with others via google drive 
+  spreadsheet.share(args.email, perm_type='user', role='writer', notify=False)
+
+  with open(get_url_path(args), 'w') as f:
+    url = 'https://docs.google.com/spreadsheets/d/{}'.format(spreadsheet.id)
+    f.write(url + '\n')
+    print(url, file=sys.stderr) 
+    print("This sheet can also be seen at https://drive.google.com/drive/shared-with-me", file=sys.stderr)
+
+def parse(): 
+  parser = argparse.ArgumentParser(description='')
+  parser.add_argument('--title', type=str, help='')
+  parser.add_argument('--bed', type=str, help='')
+  parser.add_argument('--email', type=str, help='')
+  parser.add_argument('--credentials', type=str, help='')
+  return parser.parse_args()
+ 
+if __name__ == '__main__': 
+  if not spreadsheet_already_exists(parse()): 
+    create_spreadsheet(parse())
+
