@@ -1,4 +1,4 @@
-variants="test.bed" 
+bed="test.bed" 
 credentials="credentials.json"
 
-python remove_spreadsheet.py --bed ${variants} --credentials ${credentials}
+python remove_spreadsheet.py --bed ${bed} --credentials ${credentials}

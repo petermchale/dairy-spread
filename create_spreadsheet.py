@@ -7,7 +7,7 @@ import argparse
 
 def spreadsheet_already_exists(args):
   if Path(get_url_path(args)).exists():
-    print('Spreadsheet already exists for\n{}'.format(args.bed), file=sys.stderr)
+    print('Spreadsheet already exists for:\n{}'.format(args.bed), file=sys.stderr)
     print('Please run remove script first!' , file=sys.stderr)
     return True
   else: 

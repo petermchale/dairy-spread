@@ -76,6 +76,21 @@ Wait at least 15 minutes for the requests to enable the two APIs to propagate to
 conda create --name dairy-spread python=3.7 gspread google-auth
 ```
 
+## Run the tool at the command line 
+
+Create a spreadsheet from a bed file: 
+```
+python create_spreadsheet.py \
+  --bed ${bed} \
+  --title "my spreadsheet name" \
+  --credentials "credentials.json" \
+  --email "my.name@gmail.com" 
+```
+
+Remove the spreadsheet: 
+```
+python remove_spreadsheet.py --bed ${bed} --credentials credentials.json 
+```
 
 ## TODO 
 * remove dependency on `gspread` and credentials by following https://youtu.be/VLdrgE8iJZI
