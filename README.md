@@ -1,4 +1,4 @@
-# The need for progammatic spreadsheets in bioinformatics 
+## Progammatic spreadsheets in bioinformatics 
 
 Often it is useful to have bioinformatics data in a spreadsheet, 
 where the data can be easily visualized, annotated manually, and shared with collaborators from diverse 
