@@ -17,7 +17,7 @@ and additional columns corresponding to the tags in the fourth column.
 The link can be used to visually inspect the locus in `igv.js`,
 while the spreadsheet can be used to record any conclusions drawn from the manual inspection of the igv visualization. 
 This can be useful during the development of variant-calling software, 
-when one often needs to inspect cases where (i) the software is not capturing variants that are known to exist, 
+when one often needs to manually inspect and annotate cases where (i) the software is not capturing variants that are known to exist, 
 and/or (ii) the software is making calls where variants are known to be absent. 
 
 ## How to get dairy-spread working
