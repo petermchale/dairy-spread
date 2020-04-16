@@ -87,15 +87,15 @@ chmod u+x create_spreadsheet remove_spreadsheet
 Create a spreadsheet from a bed file: 
 ```
 ./create_spreadsheet \
-  --bed ${bed} \
-  --title "my spreadsheet name" \
-  --credentials "credentials.json" \
-  --email "my.name@gmail.com" 
+  --bed test.bed \
+  --title "test data" \
+  --credentials credentials.json \
+  --email peter.thomas.mchale@gmail.com 
 ```
 
 Remove the spreadsheet: 
 ```
-./remove_spreadsheet --bed ${bed} --credentials credentials.json 
+./remove_spreadsheet --bed test.bed --credentials credentials.json 
 ```
 
 ## TODO 
