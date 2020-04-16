@@ -22,7 +22,7 @@ and/or (ii) the software is making calls where variants are known to be absent.
 ## How to get dairy-spread working
 
 1. [Obtain credentials for the Google Drive API](#obtain-credentials-for-the-google-drive-api)
-2. Install dependencies 
+2. [Install dependencies](#install-dependencies)
 3. Run the tool at the command line 
 
 ## Obtain credentials for the Google Drive API 
@@ -71,6 +71,9 @@ Wait at least 15 minutes for the requests to enable the two APIs to propagate to
 
 ## Install dependencies 
 
+```
+conda create --name dairy-spread python=3.7 gspread google-auth
+```
 
 
 
