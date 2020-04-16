@@ -3,7 +3,9 @@
 Often it is useful to have bioinformatics data in a spreadsheet, 
 where the data can be better visualized and annotated manually. 
 To integrate this approach into a data-analysis pipeline, 
-it is useful to be able to programatically interact with the spreadsheet. 
+it is useful to be able to programatically interact with the spreadsheet,
+e.g., create the spreadsheet from a traditional bioinformatics data file, 
+or read data from the spreadsheet after it has been manually curated in order to push that data back into a pipeline.
 
 dairy-spread allows you to create a google spreadsheet at the command line from a vcf, and to delete a spreadsheet so created, 
 also from the command line.
