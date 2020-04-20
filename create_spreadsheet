@@ -32,7 +32,7 @@ def create_spreadsheet(args):
   )
 
   # https://github.com/burnash/gspread/blob/0f22a5d9f9adea7db72c94273d9f69a5a7711398/gspread/models.py#L88
-  # make column headings bold
+  # make column headings bold and widen "locus" column
   request_body = {
     'requests': [
       { 
@@ -47,6 +47,19 @@ def create_spreadsheet(args):
             }
           },
           'fields': 'userEnteredFormat.textFormat.bold',
+        }
+      },
+      {
+        "updateDimensionProperties": {
+          "range": {
+            "dimension": "COLUMNS",
+            "startIndex": 0,
+            "endIndex": 1
+          },
+          "properties": {
+            "pixelSize": 300
+          },
+          "fields": "pixelSize"
         }
       }
     ]

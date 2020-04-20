@@ -1,4 +1,5 @@
 import sys
+import os
 
 def fetch_data_core(line):  
   chromosome, start, end, annotation_ = line.strip().split('\t')[:4]
@@ -20,6 +21,8 @@ def fetch_header(line):
   return header 
 
 def fetch_data(bed_filename): 
+  if os.stat(bed_filename).st_size == 0: 
+    return [[]], [[]]
   urls_annotations = []
   header_not_fetched = True
   with open(bed_filename) as f:
