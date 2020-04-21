@@ -11,9 +11,13 @@ The code in this repository represents a first step in this direction.
 
 **dairy-spread** allows you to create a google spreadsheet at the command line from a bed file,
 and to delete a spreadsheet so created, also from the command line.
-The bed file is assumed to have at least four columns, with the fourth column formated according to the [gfftags spec](https://software.broadinstitute.org/software/igv/BED), and an optional `#gffTags` header line. 
+The bed file is assumed to have at least three columns, representing chromosome, start and end of a bunch of genomic intervals. 
+If there is a fourth column, it is assumed to be formated according to the 
+[gfftags spec](https://software.broadinstitute.org/software/igv/BED), 
+and the file may contain an optional `#gffTags` header line. 
 Each record in the spreadsheet contains a hyperlink representing the location of the locus, 
-and additional columns corresponding to the tags in the fourth column. 
+and additional columns corresponding to the tags in the fourth column, 
+if it exists. 
 The link can be used to visually inspect the locus in `igv.js`,
 while the spreadsheet can be used to record any conclusions drawn from the manual inspection of the igv visualization. 
 This can be useful during the development of variant-calling software, 

@@ -1,16 +1,22 @@
 import sys
 import os
 
+def get_url(chromosome, start, end): 
+  return 'http://localhost:5000/?locus={}:{}-{}'.format(chromosome, start, end)
+
 def fetch_data_core(line):  
-  chromosome, start, end, annotation_ = line.strip().split('\t')[:4]
-  url = 'http://localhost:5000/?locus={}:{}-{}'.format(chromosome, start, end)
-  keys = []
-  values = []
-  for key_value in annotation_.split(';'): 
-    key, value = key_value.split('=') 
-    keys.append(key) 
-    values.append(value) 
-  return url, keys, values 
+  try: 
+    chromosome, start, end, annotation_ = line.strip().split('\t')[:4]
+    keys = []
+    values = []
+    for key_value in annotation_.split(';'): 
+      key, value = key_value.split('=') 
+      keys.append(key) 
+      values.append(value) 
+    return get_url(chromosome, start, end), keys, values 
+  except ValueError: 
+    chromosome, start, end = line.strip().split('\t')[:3]
+    return get_url(chromosome, start, end), [], []
 
 def fetch_url_annotation(line): 
   url, _, annotation = fetch_data_core(line)
