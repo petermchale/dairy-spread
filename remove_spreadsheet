@@ -8,8 +8,8 @@ from get_client import get_client
 
 def parse():
   parser = argparse.ArgumentParser(description='')
-  parser.add_argument('--bed', type=str, help='')
-  parser.add_argument('--credentials', type=str, help='')
+  parser.add_argument('--bed', type=str, help='', required=True)
+  parser.add_argument('--credentials', type=str, help='', required=True)
   return parser.parse_args()
 
 def remove_spreadsheet(args): 

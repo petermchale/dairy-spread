@@ -3,9 +3,9 @@ from google.oauth2.service_account import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
 def get_client(args):
-  scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+  scopes = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
   if args.credentials.endswith('.json'):
-    credentials = Credentials.from_service_account_file(args.credentials, scopes=scope)
+    credentials = Credentials.from_service_account_file(args.credentials, scopes=scopes)
   else:
     print('credentials files must be in json format', file=sys.stderr)
     sys.exit()

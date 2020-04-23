@@ -102,5 +102,3 @@ Remove the spreadsheet:
 ./remove_spreadsheet --bed test.bed --credentials credentials.json 
 ```
 
-## TODO 
-* remove dependency on `gspread` and the overly complicated process of obtaining credentials by following https://youtu.be/VLdrgE8iJZI
